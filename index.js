@@ -15,7 +15,7 @@ const teamArray = [];
 
 //manager
 const addManager = () => {
-    return inquirer.promt ([
+    return inquirer.prompt ([
         {
             type: 'input',
             name: 'name',
@@ -194,3 +194,25 @@ const addEmployee = () => {
 
 //generate html page with info
 
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("successfully created! Please check the index.html")
+        }
+    })
+}; 
+
+addManager()
+  .then(addEmployee)
+  .then(teamArray => {
+    return generateHTML(teamArray);
+  })
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .catch(err => {
+ console.log(err);
+  });
