@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
+
+:root {
+    --pri-color: rgb(255, 0, 0);
+    --color: white;
+    --sec-color: blue;
+    --text-color: black;
+    --font-font-family: 'Libre Franklin', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-font-family);
+}
+
+#navbar {
+    background-color: var(--pri-color);
+    color: var(--color);
+    font-size: 50px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.card-header {
+    background-color: var(--sec-color);
+    color: var(--color);
+}
+
+.card-body {
+    background-color: var(--color);
+    color: var(--text-color);
+}
+
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+}

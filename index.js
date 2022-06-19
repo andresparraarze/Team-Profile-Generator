@@ -34,7 +34,7 @@ const addManager = () => {
             name: 'id',
             Message: 'Please enter the managers ID',
             validate: nameInput => {
-                if (isNan(nameInput)) {
+                if (nameInput) {
                     return true;
                 } else {
                     console.log ("Please enter ID!");
